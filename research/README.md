@@ -113,3 +113,33 @@ This result is preliminary and should not be interpreted as representative of th
 - A company name or Companies House registration number cannot automatically be treated as a VAT identifier.
 - HMRC validation confirms a candidate VAT number but does not discover unknown VAT numbers.
 - Failure to find a VAT identifier on one or two public pages does not establish that the company has no VAT registration.
+
+## 10. Automated Testing and Technical Results
+A Python-based proof of concept was developed in Google Colab to extract potential UK VAT identifiers from publicly accessible web page text.
+
+### 10.1 Automated Source Testing
+| Source | HTTP Status | Characters Extracted | VAT Identifier Found |
+|---|---:|---:|---|
+| Tesco official website | 403 | 0 | No |
+| Companies House | 200 | 2,210 | No |
+| Sainsbury's official website | 200 | 53,803 | Yes |
+
+The Tesco website returned HTTP 403, indicating that automated access was forbidden. This prevented the extraction process from accessing its page content.
+
+Companies House was accessible, but the extracted company overview did not contain a VAT identifier.
+
+Sainsbury's website returned accessible page text containing its VAT registration number.
+
+### 10.2 Extraction Method
+The proof of concept uses Python regular expressions to identify strings matching the expected UK VAT identifier format.
+The extraction process identifies potential VAT number candidates. It does not independently establish whether a candidate is genuine or belongs to the company being investigated.
+
+### 10.3 Technical Limitations
+- Some websites restrict automated access.
+- Page structure and dynamically loaded content can affect text extraction.
+- A matching number format does not guarantee that the identifier is valid.
+- Automated extraction must be followed by independent validation.
+- The current implementation is a proof of concept and requires further testing before large-scale use.
+
+### 10.4 Technical Conclusion
+The automated tests demonstrate that Python can extract potential VAT identifiers from accessible website text. However, access restrictions and differences in website content limit the reliability of a fully automated discovery process.
