@@ -129,6 +129,9 @@ The Tesco website returned HTTP 403, indicating that automated access was forbid
 Companies House was accessible, but the extracted company overview did not contain a VAT identifier.
 
 Sainsbury's website returned accessible page text containing its VAT registration number.
+The automated results should be interpreted separately from the manual research findings. During manual investigation, VAT identifiers were identified for both Tesco PLC and Sainsbury's Supermarkets Ltd, and both were confirmed as valid through HMRC.
+
+Although the automated test could not access Tesco's website due to an HTTP 403 response, manual research of its publicly available Terms & Conditions page successfully identified its VAT number. This demonstrates that automated access restrictions do not necessarily indicate that relevant information is unavailable to human researchers.
 
 ### 10.2 Extraction Method
 The proof of concept uses Python regular expressions to identify strings matching the expected UK VAT identifier format.
