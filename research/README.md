@@ -28,3 +28,25 @@ This section will summarize the findings, including unsuccessful approaches, dat
 
 ## 6. Conclusions
 The final conclusions will assess whether UK company VAT identifier discovery is feasible and under what conditions.
+
+## 7. Case Study: Tesco PLC
+### Company identification
+- Company name: Tesco PLC
+- Companies House company number: 00445790
+- Initial source: Companies House
+### VAT number discovery
+- Source: Tesco official website – General Terms & Conditions
+- URL: https://www.tesco.com/shop/en-GB/zone/general-terms-and-conditions
+- VAT number discovered: GB220430231
+### VAT number validation
+- Validation source: HMRC – Check a UK VAT number
+- URL: https://www.tax.service.gov.uk/check-vat-number/enter-vat-details
+- Validation result: Valid UK VAT number
+- HMRC registered business name: TESCO PLC
+- HMRC registered business address: Cirrus A, Shire Park, Kestrel Way, Welwyn Garden City, AL7 1GA, GB
+- Validation date: 26 November 2026
+### Conclusion
+The Tesco case study demonstrates that a UK company's VAT identifier can be discovered through its official website and subsequently validated using HMRC's VAT checking service.
+The HMRC result confirmed that VAT number 220430231 belongs to TESCO PLC. This also highlights the importance of matching VAT identifiers to the correct legal entity rather than assuming that all companies within the same corporate group share the same VAT registration.
+### Limitation
+This is one successful test case. Further testing across companies of different sizes and sectors is required before drawing conclusions about discovery coverage or scalability.
