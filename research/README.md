@@ -95,9 +95,8 @@ Four UK companies from different sectors were selected to test whether VAT ident
 - Limitation: The absence of a VAT number on these pages does not mean that the company is not VAT registered.
 
 ## 9. Preliminary Findings
-The initial tests demonstrate that official company websites can be useful sources for discovering UK VAT identifiers.
-Two companies out of the four tested had VAT identifiers publicly available in the investigated sources. Both identifiers were subsequently confirmed as valid through HMRC.
-The other two cases illustrate an important limitation: VAT identifiers are not necessarily published on general terms and conditions or customer support pages. In the BT case, the relevant VAT registration number is associated with the specific BT entity issuing a purchase order.
+The initial tests demonstrate that official company websites and public records can be useful sources for discovering UK VAT identifiers. Two of the four tested companies had VAT identifiers publicly available in the investigated sources. Both identifiers were subsequently confirmed as valid through HMRC.
+The other two cases illustrate the limitations of public information. In the BT case, the investigated supplier information indicates that the relevant VAT registration number is provided on the purchase order issued by BT. However, this identifier was not retrieved from the public pages investigated. For National Express, no VAT identifier was found on the investigated Terms & Conditions and Contact pages.
 
 ### 9.1 Initial Results
 - Companies tested: 4
@@ -123,6 +122,8 @@ A Python-based proof of concept was developed in Google Colab to extract potenti
 | Tesco official website | 403 | 0 | No |
 | Companies House | 200 | 2,210 | No |
 | Sainsbury's official website | 200 | 53,803 | Yes |
+
+The automated test table covers three source checks. BT Group and National Express were assessed through manual research and are documented separately in the company-level research results.
 
 The Tesco website returned HTTP 403, indicating that automated access was forbidden. This prevented the extraction process from accessing its page content.
 
