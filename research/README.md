@@ -118,7 +118,7 @@ This result is preliminary and should not be interpreted as representative of th
 A Python-based proof of concept was developed in Google Colab to extract potential UK VAT identifiers from publicly accessible web page text.
 
 ### 10.1 Automated Source Testing
-| Source | HTTP Status | Characters Extracted | VAT Identifier Found |
+| Source | HTTP Status | Characters Extracted |VAT Identifier Found (Automated)|
 |---|---:|---:|---|
 | Tesco official website | 403 | 0 | No |
 | Companies House | 200 | 2,210 | No |
