@@ -1,0 +1,4 @@
+company,source,http_status,characters_extracted,vat_discovered,hmrc_validation
+Tesco PLC,Official website,403,0,False,Not tested
+Tesco PLC,Companies House,200,2210,False,Not applicable
+Sainsbury's Supermarkets Ltd,Official website,200,53803,True,Valid - manually checked
